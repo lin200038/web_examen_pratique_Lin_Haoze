@@ -32,20 +32,27 @@
     .main-container { flex-direction: column; }
 }
 
+
 @media (max-width: 1249px) {
   .benefit-row {
     flex-direction: column;
-    position: relative; 
-    margin-bottom: 60px; 
+    position: relative;
+    align-items: center;
+    margin-bottom: 60px;
   }
-  
+
   .benefit-img {
-    width: 100%; 
-    margin-left: calc(-50vw + 50%); 
+    width: 100%;
     height: auto;
-    min-height: 180px;
+    min-height: 200px;
     max-height: 380px;
     object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .img-1, .img-2 {
+    width: 100%;
+    position: relative;
   }
 
   .benefit-text {
@@ -53,14 +60,29 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    background: rgba(255,255,255,0.9);
-    z-index: 1;
-    margin: 0;
-  }
-  .benefit-text h2{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
     text-align: center;
-    color:blue;
+    z-index: 2;
+  }
+
+  .img-2 .base,
+  .img-2 .over {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .img-2 .over {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.9;
   }
 
   .form-trial {
@@ -82,7 +104,7 @@
     max-width: 500px;
     margin: 0 auto;
   }
-}
+
 
 .form-trial {
   display: flex;
@@ -92,8 +114,7 @@
 .trial h3 {
   margin-bottom: 16px;
 }
-
-
+}
 
 @media (max-width: 950px) {
   .plan-cards {
@@ -113,7 +134,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85vw;
+    width: 100;
     min-height: 100vh;
     background: aliceblue;
     margin: 0 auto;
@@ -223,13 +244,16 @@ footer {
   .benefits-simple {
     margin: 0 auto 1px auto;
     background: #f6f6f6;
-
+    display: flow-root;
   }
+  
   .benefit-row {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
     gap: 40px;
+    padding: 10px 20%;
+    
   }
   .benefit-row .benefit-img {
     width: 260px;
@@ -244,6 +268,7 @@ footer {
   .benefit-text p {
     color: #555;
     font-size: 1rem;
+     max-width: 70%;
   }
 
 
@@ -277,7 +302,7 @@ footer {
   font-weight: 600;
   font-size: 1.06rem;
   padding: 8px 28px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 10px;
   margin-right: -1px;
   outline: none;
   transition: all 0.2s;
@@ -406,4 +431,32 @@ footer {
 }
 .trial-form button {
   margin-top: 6px;
+}
+
+.img-1 {
+  width: 50% ;
+  height: auto;
+  padding:10px 10px 30px 30px;
+  margin-left:100px;
+}
+
+.img-2 {
+  position: relative;
+  width: 35%;
+  margin-left: 25px;
+
+}
+
+.img-2 .base {
+  width: 300px;
+  border-radius: 16px black;
+}
+
+.img-2 .over {
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  right: 8vw;
+  z-index: 1;
+  border-radius: 16px black;
 }
